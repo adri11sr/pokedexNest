@@ -1,6 +1,7 @@
 import { join } from 'path';
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 @Module({
   imports: [
@@ -8,6 +9,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
       rootPath: join(__dirname,'..','public'), 
       serveRoot: '/',
     }),
+    PokemonModule,
   ],
 })
 export class AppModule {}
