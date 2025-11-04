@@ -22,7 +22,9 @@ async function bootstrap() {
       // ! Excluye los campos undefined
       transformOptions: {
         exposeUnsetFields: false
-      }
+      },
+
+      transform:true
       
     })
   );
